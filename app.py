@@ -107,7 +107,7 @@ user_input = st.chat_input("Enter your message:")
 if user_input:
     st.chat_message("user").write(user_input)
     placeholder = st.chat_message("AI").empty()
-    similar_text = "You are an expert researcher in generative AI and machine learning."
+    similar_text = "You are a Multi Task AI Agent"
     st.session_state.messages.append({"role": "user", "content": user_input})
 
     if st.session_state.v_db:
