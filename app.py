@@ -5,11 +5,10 @@ import google.generativeai as genai
 from langchain.vectorstores import FAISS
 import numpy as np
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
-from dotenv import load_dotenv
 import os
 
-load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))  # Loads API key
+
+genai.configure(api_key=st.secrets['GOOGLE_API_KEY'])  # Loads API key
 
 model = 'models/embedding-001'
 chat_model = genai.GenerativeModel('gemini-1.5-flash')
